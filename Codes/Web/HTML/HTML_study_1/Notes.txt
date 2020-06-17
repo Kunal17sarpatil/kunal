@@ -1,0 +1,124 @@
+HTML - Hypertext markup language
+
+Heading tags
+* Starts from <h1> to <h6> : We use these tags as per the requirements of the headings.
+
+Paragraph tags:
+* represented by <p> which means paragraph in this we can write content.
+
+Comments:
+* <!Comments> this is how comment is given in HTML
+
+Link:
+* To provide link we use <a> tag.
+* For web pages we use <a href = "url">
+
+* Images:
+To inser images we use:- <img src = "path of the image">
+
+List:
+
+* We insert list by using <li> tag
+<ul> : this tag is the parent of <li> which means <li> is children of <ul>
+eg:- <ul>
+        <li>Hello</li>
+        <li>Kunal</li>
+        <li>Sarpatil</li>
+     </ul>
+and this tag gives bullets for our list by default
+
+* if you want your list withour bullets we have to declare "list-style:none" in our css file
+* for printing the list horizontally we use "float-left" property in css
+
+
+HTML:
+        HTML always has <!DOCTYPE html> declaration to show that this file belongs to HTML
+        <html> in between these two tags whole other tags are written</html>
+        <head> in between these tags only settings are written </head>
+        <body> between these tags all content which is visible to browser is written </body>
+
+        eg: <head> 
+                <meta charset = "utf-8"> //character encoding
+                <link rel = "stylesheet" href = "stylesheet.css"> //link to stylesheet page
+                <title>MY Webpage</title> //title for the page
+            </head>
+
+* We always divide our Webpage in three parts header, main and footer 
+for our better understading we can divide parts of the resp components with the help of <div> tag
+<div class="header">
+<div>
+
+<div class = "main">
+</div>
+
+<div class = "Footer">
+</div>
+
+<span>: If you want to change color of any single word from a text.
+and declare it into css
+eg: HTML: <h1>
+        Welcome to the <span>coding</span> world.
+        </h1>
+    
+    CSS: span {
+            color: red;
+        }
+
+
+
+
+
+
+
+
+
+
+                                                    
+                                                 CSS
+
+CSS: css is used to give color, size, spacing to our HTML page
+css file is written different from the HTML file it works on the(where, what and how)
+
+comments can be given in '/* */'
+
+eg: h1 {
+    color : red;
+}
+here, 
+    h1 : where
+    color : what
+    red : how
+
+** For changing font size we use font-size : 40px (here px is its unit).
+** For font family we simply use font-family.
+** For background color "background-color" is used.
+** For height and width "height" and "width" is used respectively.
+h1 {
+    color : red;
+    font-family : serif;
+    font-size : 20px
+    height: 50px;
+    width : 500px;
+}
+
+Whenever we want to change color or any single attribute from the list then we must have to specify
+a class in HTML and likewise with same class name we can make changes to it's apperrance 
+
+kunal.html
+<ul>
+    <li class = "KUnal">Kunal</li>
+</ul>
+
+kunal.css
+.Kunal {
+    color: red:
+
+}
+
+Padding: for padding we use "padding:20px" in css
+
+Border: For giving border or a single line from left to right has 3 parameters thickness, style, color
+        we can give different type of borders top, bottom, left, right.
+
+Box :   For each element there always a box which is invisible. Inside that it has padding and outside it
+        has margin.

@@ -1,0 +1,72 @@
+* File Handling : 
+
+    In Python, a physical file must be mapped to a built-in file object with the help of built-in function open().
+
+    Signature : 
+
+        file object = open(file name[, access mode][, buffersize]) 
+
+    In the open() method, the first parameter is the name of a file including its path. The access mode parameter is an optional parameter 
+    which decides the purpose of opening a file, e.g. read, write, append, etc. 
+    Use access mode 'w' to write data in a file and 'r' to read data. The optional buffersize argument specifies the file's desired buffer 
+    size: 0 means unbuffered, 1 means line buffered and other positive values indicate the buffer size. 
+    A negative buffersize uses the default value. If a file cannot be opened, then OSError or its subtype is raised. 
+
+* Writing to a File : 
+
+    Example : 
+
+        f=open("D:\myfile.txt","w")
+        f.write("Hello! Learn Python on TutorialsTeacher.")
+        f.close()
+
+    In the above example, the f=open("myfile.txt","w") statement opens myfile.txt in write mode, the open() method returns the file object 
+    and assigns it to a variable f. "w" specifies that the file should be writable. Next, we have to put certain data in the file. 
+    The f.write("Hello! Learn Python on TutorialsTeacher.") stores a string in the file. In the end, f.close() closes the file object. 
+
+    In the above example, the f=open("myfile.txt","w") statement opens myfile.txt in write mode, the open() method returns the file object 
+    and assigns it to a variable f. "w" specifies that the file should be writable. Next, we have to put certain data in the file. 
+    The f.write("Hello! Learn Python on TutorialsTeacher.") stores a string in the file. In the end, f.close() closes the file object. 
+
+    Example : 
+
+        lines=["Hello world.\n", "Welcome to TutorialsTeacher.\n"]
+        f=open("D:\myfile.txt","w")
+        f.writelines(lines)
+        f.close()
+
+* Reading from file 
+
+    Three different methods are provided to read data from file.
+
+    1) readline(): reads the characters starting from the current reading position up to a newline character.
+    2) read(chars): reads the specified number of characters starting from the current position.
+    3) readlines(): reads all lines until the end of file and returns a list object.
+
+    Example : 
+
+        f=open("myfile.txt","r")
+        line=f.readline()
+        print(line)
+        f.close()
+
+    * Append to a text file :  
+
+        f=open("D:\myfile.txt","a+")
+        f.write("Hello! Learn Python on TutorialsTeacher.")
+        line=f.readline()
+        f.close()
+
+        Opening a file with "w" mode or "a" mode can only be written into and cannot be read from. Similarly "r" mode 
+        allows reading only and not writing. In order to perform simultaneous read/append operations, use "a+" mode. 
+
+    * seek() method : 
+
+        To read or write at a specific position, use the seek() function to set the current read/write position. 
+
+        f=open("D:\myfile.txt","r+")
+        f.seek(6,0)
+        lines=f.readlines()
+        for line in lines:
+            print(line)
+        f.close()

@@ -1,0 +1,23 @@
+Python is a general-purpose high level programming language, it is a open-source programming language.
+
+Guido Van Rossum conceived Python in the late 1980s. 
+It was released in 1991 at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC language. 
+He named this language after a popular comedy show called 'Monty Python's Flying Circus' (and not after Python-the snake).
+
+Features of Python :-
+
+1) Easy : Python is very easy to learn and understand.
+2) Interpreted : It is interpreted language so it's execution is done line by line. This makes it easy to test and debug.
+3) Object-Oriented : The Python programming language supports classes and objects. We discussed these above.
+4) Free(open-source) : The language and its source code are available to the public for free.
+5) Portable : Since it is open-source, you can run Python on Windows, Mac, Linux or any other platform. Your programs will work without needing to the changed for every machine.
+
+Flavours of Python :
+1) CPython : This is the most widely accepted implementation of Python. It is written in the language C, and is an interpreter.
+2) Jython : Jython is a Python implementation written in Java. A Jython program can import any Java class.
+3) IronPython : IronPython is implemented in C#. It can function as an extensibility layer to application frameworks written in a .NET language.
+4) Brython : Brython stands for Browser Python. It is an implementation of Python that runs in the browser.
+5) RubyPython : It acts as a bridge between the Python and Ruby interpreters. It marshals data between Python and Ruby virtual machines.
+6) PyPy : Interesting to know how PyPy is Python implemented in Python. This makes it faster and easier to experiment with. However, the standard implementation is CPython.
+7) MicroPython : This is an implementation of Python meant to run on a microcontroller.
+

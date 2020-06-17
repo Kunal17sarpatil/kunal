@@ -1,0 +1,104 @@
+* If Condition :
+
+    Python uses the if keyword to implement decision control. Python's syntax for executing a block conditionally is as below: 
+
+        if [boolean expression]:
+            statement1
+            statement2
+            ...
+            statementN
+
+    Any Boolean expression evaluating to True or False appears after the if keyword. Use the : symbol and press Enter 
+    after the expression to start a block with increased indent. 
+    One or more statements written with the same level of indent will be executed if the Boolean expression evaluates to True. 
+
+
+        >>> if 10<100:
+        ...   print("10 is less than 100")
+        10 is less than 100
+
+    Python program that calculates the amount payable from price and quantity inputs by the user and applies a 10% 
+    discount if the amount exceeds 1000.     
+
+
+        price=int(input("Enter Price: "))
+        qty=int(input("Enter Quantity: "))
+        amt=price*qty
+        if amt>1000:
+          print ("10% discount is applicable")
+          discount=amt*10/100
+          amt=amt-discount
+        print ("Amount payable: ",amt)
+
+    
+    Output : 
+
+        Enter Price: 100
+        Enter Quantity: 20
+        10% discount is applicable
+        Amount payable: 1800.0 
+
+* else Condition : 
+
+    Along with the if statement, the else condition can be optionally used to define an alternate block of statements 
+    to be executed if the boolean expression in the if condition is not true.
+
+        if [boolean expression]:
+            statement1
+            statement2
+            ...
+            statementN
+        else:
+            statement1
+            statement2
+            ...
+            statementN
+
+
+    As mentioned before, the indented block starts after the : symbol, after the boolean expression. 
+    It will get executed when the condition is true. We have another block that should be executed when the if condition is false. 
+    First, complete the if block by backspace and write else, put add the : symbol in front of the new block to 
+    begin it and add the required statements in the block. 
+    De-dent the else block and enter the statements that should be executed, irrespective of the boolean expression 
+    being true or false. 
+
+        >>>> if 10>100:
+        ...   print("10 is greater than 100")
+        ... else:
+        ...   print("10 is less than 100")
+
+        output : 
+
+            10 is less than 100
+
+* else-if condition (elif): 
+
+    Use the elif condition is used to include multiple conditional expressions between if and else.
+
+        if [boolean expression]:
+            [statements]
+        elif [boolean expresion]:
+            [statements]
+        elif [boolean expresion]:
+            [statements]
+        elif [boolean expresion]:
+            [statements]
+        else:
+            [statements]
+
+    Example :
+
+        >>>> x=10
+        >>>> if x==1:
+        ...  print('X is 1')
+        ... elif x==5:
+        ...  print('X is 5')
+        ... elif x==10:
+        ...  print('X is 10')
+        ... else:
+        ...  print('X is something else') 
+
+    Output: 
+
+        X is 10
+    

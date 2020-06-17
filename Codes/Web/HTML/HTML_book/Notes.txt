@@ -1,0 +1,52 @@
+Structures And Tags:
+
+    <strong> : This tag is used for making the statement bold which has some strong msg
+    <em> : This tag means emphasis it makes the word italic.
+    <q> : this tag is to give quotes around the word.
+    <abbr> : This tag is used for showing acrronym like Prof.:Professor Dr. : Doctor
+    <cite> : This is tag is used where citation is required
+    <dfn> : This tag is used for defining a word 
+
+Lists: 
+
+    <ol> : This tag represents "Ordered List" 
+        <li> : This tag is used inside "ol" tag which shows the elements of the List
+    <ul> : This tag represents "unordered list"
+    <dl> : This tag represents "Definition List"
+        <dt> : This tag is used inside "dl" which represents "definition term"
+        <dd> : This tag is used for giving the definition for "dt"
+
+Links:
+    
+    mailto: this attribute is used to mail to direct person
+            <a href = "mailto:ksarpatil7@gmail.com"> Email Kunal</a>
+
+    open in new window: for opening link in new window we have to use "target="_blank"" attribute inside <a>
+    
+    id: this attribute we can use for linking the page to the heading eg: if we want to go to top of the page
+
+Images:
+
+    <img> : This tag is used for inserting images into the web page.
+    <img src = "source.jpeg" title="source image" alt="source image file">
+    heigt & width : this attribute is used for adjusting heigt and width of image.
+    align (left or right) : This attribute is used for allignment of the image
+    align (vertical = "top, bottom, middle") 
+
+    <figure> : This tag is used for formating a whole picture or no. of pictures
+    <figcaption> : this tag is used inside the figure tag for giving caption to the image
+
+Tables:
+
+    <table> : This tag is used to display table in our page
+    <tr> : This tag represents table row pair of one (<tr> and </tr>) is used to show one row in the table
+    <td> : Thsi tag is used inside the tr tag for showing the table data
+    <th> : This tag represents table heading and it is used with (scope attribute inside th tag)
+
+    Spanning :  for giving some cell span we use "colspan" attribute inside <tr> or <td> tag.
+                for row spaning we have to use "rowspan" attribute inside <tr> and <td> tag
+
+    For bigger and larger table we can use <thead>, <tbody>, <tfoot> for ditinguish our data in proper fomat
+    heading part goes inside <thead> which includes headings of columns
+    main info or body part goes inside the <tbody>
+    last part or footer part goes insdie the <tfoot> where total and other things can be added

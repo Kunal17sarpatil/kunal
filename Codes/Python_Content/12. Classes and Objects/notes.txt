@@ -1,0 +1,187 @@
+* Classes in Python :
+
+    A class is a blueprint for objects- one class for any number of objects of that type. You can also call it an 
+    abstract data type. Interestingly, it contains no values itself, but it is like a prototype for objects.
+
+    To define a class in python programming, we use the ‘class’ keyword. This is like we use ‘def’ to define a function in python. 
+
+    Example : 
+
+        >>> class fruit: 
+                """
+                This class creates instances of fruits
+                """
+                color=''
+                def sayhi(self):
+                    print("Hi")
+        
+        >>> orange=fruit()
+
+    A class in Python can be defined using the class keyword. A class typically includes the following members:
+
+        1) Constructor
+        2) Instance Attributes
+        3) Class Attributes
+        4) Methods
+
+    * Constructor : 
+
+        In Python, the constructor method is invoked automatically whenever a new object of a class is instantiated, same as 
+        constructors in C# or Java. The constructor must have a special name __init__() and a special parameter called self. 
+
+        Example : 
+
+            class person:
+                def __init__(self): # constructor method
+                    print('Constructor invoked')
+
+        Now, whenever you create an object of the person class, the __init__() constructor method will be called, as shown below.
+
+            >>>p1 = person()
+            Constructor invoked
+            >>>p2 = person()
+            Constructor invoked
+
+    * Instance Attributes : 
+
+        Instance attributes are attributes or properties attached to an instance of a class. Instance attributes are defined in the constructor.
+
+        Example : 
+
+            class person:
+                def __init__(self): # constructor
+                    self.name="Unknown" # instance attribute
+                    self.age=0 # instance attribute
+
+        An instance attribute can be accessed using dot notation: [instance name].[attribute name]
+
+        You can set the value of attributes using the dot notation, as shown below.
+
+            >>> p1=person()
+            >>> p1.name="Bill"
+            >>> p1.age=25
+            >>> p1.name
+            Bill
+            >>> p1.age
+            25 
+
+    * Class Attributes : 
+
+        Class attributes are different from instance attributes. An attribute whose value is the same for all instances of a class is called a class attribute. 
+        The value of class attribute is shared by all objects. Class attributes are defined at class level rather than inside the constructor method __init__(). 
+        Unlike instance attributes, class attributes are accessed using the name of the class. 
+
+        Example :
+
+            class person:
+                totalObjects=0 #class attribute
+                def __init__(self):
+                    person.totalObjects=person.totalObjects+1  
+
+        In the above example, totalObject is an attribute in the person class. Whenever a new object is created, the value of totalObjects 
+        is incremented by 1. You can now access the totalObjects attribute after creating the objects, as shown below. 
+
+            >>> p1=person()
+            >>> p1.totalObjects
+            1
+            >>> p2=person()
+            >>> p2.totalObjects
+            2
+
+    * Class Methods : 
+
+        You can define as many methods as you want in a class using the def keyword. Each method must have the first parameter, generally 
+        named as self which refers to the calling instance. 
+
+        Example : 
+
+            class person:
+                def __init__(self): 
+                    self.name="unknown" 
+                    self.age=0 
+                def displayInfo(self): #method
+                    print(self.name, self.age)
+
+        As you can see, the instance attributes of an instance can be accessed using the self parameter.
+
+        The methods of a class can be called using an instance, as show below.
+            >>> p1=person()
+            >>> p1.displayInfo()
+            unknown 0
+
+* Access Specifiers : 
+
+    * Public : 
+
+        Public members (generally methods declared in a class) are accessible from outside the class. The object of the same class is required 
+        to invoke a public method. This arrangement of private instance variables and public methods ensures the principle of data encapsulation. 
+
+        All members in a Python class are public by default. Any member can be accessed from outside the class environment. 
+
+        Example : 
+            
+            class employee:
+                def __init__(self, name, sal):
+                    self.name=name
+                    self.salary=sal
+
+        You can access employee class's attributes and also modify their values, as shown below.
+
+            >>> e1=employee("Kiran",10000)
+            >>> e1.salary
+            10000
+            >>> e1.salary=20000
+            >>> e1.salary
+            20000 
+
+    * Protected : 
+
+        Protected members of a class are accessible from within the class and are also available to its sub-classes. No other environment is 
+        permitted access to it. This enables specific resources of the parent class to be inherited by the child class. 
+
+        Python's convention to make an instance variable protected is to add a prefix _ (single underscore) to it. This effectively 
+        prevents it to be accessed, unless it is from within a sub-class.
+
+        Example : 
+
+            class employee:
+                def __init__(self, name, sal):
+                    self._name=name  # protected attribute 
+                    self._salary=sal # protected attribute
+
+        In fact, this doesn't prevent instance variables from accessing or modifyingthe instance. 
+
+        >>> e1=employee("Swati", 10000)
+        >>> e1._salary
+        10000
+        >>> e1._salary=20000
+        >>> e1._salary
+        20000  
+
+    * Private : 
+
+        A double underscore __ prefixed to a variable makes it private. It gives a strong suggestion not to touch it 
+        from outside the class. Any attempt to do so will result in an AttributeError: 
+
+    
+        Example : 
+
+            class employee:
+                def __init__(self, name, sal):
+                    self.__name=name  # private attribute 
+                    self.__salary=sal # private attribute
+
+        
+            >>> e1=employee("Bill",10000)
+            >>> e1.__salary
+            AttributeError: 'employee' object has no attribute '__salary' 
+
+        Python performs name mangling of private variables. Every member with double underscore will be changed to _object._class__variable. 
+        If so required, it can still be accessed from outside the class, but the practice should be refrained.
+
+            >>> e1=employee("Bill",10000)
+            >>> e1._employee__salary
+            10000
+            >>> e1._employee__salary=20000
+            >>> e1._employee__salary
+            20000

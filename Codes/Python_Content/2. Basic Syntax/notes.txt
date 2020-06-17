@@ -1,0 +1,51 @@
+Keywords:   
+            (keyword.png)
+            A computer programming language comprises of a set of predefined words which are called keywords. 
+            A prescribed rule of usage for each keyword is called a syntax.
+            The list of Python keywords can be obtained using the following help command in Python shell. 
+
+Identifiers : 
+
+            1) Apart from keywords, a Python program can have variables, functions, classes, modules, packages etc. 
+            2) Identifier is the name given to these programming elements. 
+               An identifier should start with either an alphabet letter (lower or upper case) or an underscore (_). 
+               After that, more than one alphabet letters (a-z or A-Z), digits (0-9) or underscores may be used to form an identifier. 
+               No other characters are allowed. 
+
+Identation : 
+
+            Python uses uniform indentation to denote a block of statements. 
+            When a block is to be started, type the exclamation symbol (:) and press Enter. 
+            Any Python-aware editor (like IDLE) goes to the next line leaving an additional whitespace (called indent). 
+            Subsequent statements in the block follow the same level of indent. 
+            In order to signal the end of a block, the whitespace is de-dented by pressing the backspace key. 
+            If your editor is not configured for Python, you may have to ensure that the statements in a block have the same indentation level by pressing the spacebar or Tab key. 
+            The Python interpreter will throw an error if the indentation level in the block is not same. 
+
+Comments :
+            In a Python script, the symbol # indicates the start of a comment line. 
+            It is effective till the end of the line in the editor. 
+            If # is the first character of the line, then the entire line is a comment. 
+            It can be used also in the middle of a line. 
+            The text before it is a valid Python expression, while the text following is treated as a comment.
+            (multi-line.png)
+            A triple quoted multi-line string is also treated as a comment if it is not a docstring of a function or a class. 
+            (The use of docstring will be explained in subsequent tutorials on Python functions.)  
+
+Input : 
+            
+            The input() function is a part of the core library of standard Python distribution. 
+            It reads the key strokes as a string object which can be referred to by a variable having a suitable name. 
+            The input() function always reads the input as a string, even if comprises of digits. 
+            The type() function used confirms this behaviour.      
+
+Ouput :
+            Built-in function print() serves as an output statement in Python. 
+            It echoes the value of any Python expression on the Python shell. 
+            Multiple values can be displayed by the single print() function separated by comma. 
+            By default, a single space (' ') acts as a separator between values. However, any other character can be used by providing a sep parameter. 
+            We can give ',' or anything by specifiying it in " sep=' ' ".            
+            The output of the print() function always ends by a newline character. 
+            The print() function has another optional parameter end, whose default value is "\n". 
+            This value can be substituted by any other character such as a single space (' ') to display the output of the subsequent print() statement in the same line.
+            

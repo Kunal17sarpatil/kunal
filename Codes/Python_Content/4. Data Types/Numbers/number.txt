@@ -1,0 +1,25 @@
+Number Type :
+
+        * Integer : 
+
+                Zero, positive and negative whole numbers without a fractional part and having unlimited precision, e.g. 1234, 0, -456. 
+                A number having 0o or 0O as prefix represents an octal number.
+                For example: 0O12: equivalent to 10 (ten) in the decimal number system. 
+                A number with 0x or 0X as prefix represents hexadecimal number. 
+                For example: 0x12: equivalent to 18 (Eighteen) in the decimal number system. 
+
+        * Float :
+
+                Positive and negative real numbers with a fractional part denoted by the decimal symbol or the scientific notation using E or e, e.g. 1234.56, 3.142, -1.55, 0.23. 
+                Scientific notation is used as a short representation to express floats having many digits. 
+                For example: 
+                345600000000 is represented as 3.456e11 or 3.456E11 
+                345.56789 is represented as 3.4556789e2 or 3.4556789E2 
+
+        * Complex : 
+
+                A complex number is a number with real and imaginary components. 
+                For example, 5 + 6j is a complex number where 5 is the real component and 6 multiplied by j is an imaginary component.        
+                Example: 1+2j, 10-5.5J, 5.55+2.33j, 3.11e-6+4j 
+
+                

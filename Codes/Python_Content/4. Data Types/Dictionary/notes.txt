@@ -1,0 +1,123 @@
+Dictionary : 
+
+    Dictionary is also a collection type. However, it is not an ordered sequence, and it contains key-value pairs. 
+    One or more key:value pairs separated by commas are put inside curly brackets to form a dictionary object.
+
+    >>> capitals={"USA":"Washington, D.C.", "France":"Paris", "India":"New Delhi"} 
+
+    In the above example, capitals is a dictionary object. The left side of : is a key and right side of : is a value. 
+    The key should be an immutable object. 
+    A number, string or tuple can be used as key.
+
+    A list or tuple can also be used as a value
+
+    >>> dict={"Fruit":["Mango","Banana"], "Colour":["Blue", "Red"]}
+    >>> dict={"Fruit":("Mango","Banana"), "Colour":("Blue", "Red")}
+
+* Accessing Dictionary : 
+
+    Dictionary is not an ordered collection, so a value cannot be accessed using an index in square brackets. 
+    A value in a dictionary can be fetched using the associated key, using the get() method. 
+    Specify the key in the get() method to retrieve its value.
+
+    >>>capitals={"USA":"New York", "France":"Paris", "Japan":"Tokyo", "India":"New Delhi"}
+    >>>capitals.get("France")
+    'Paris'
+    
+    >>>points={"p1":(10,10), "p2":(20,20)}
+    >>>points.get("p2")
+    (20,20)
+    
+    >>>numbers={1:"one", 2:"Two", 3:"three",4:"four"}
+    >>>numbers.get(2)
+    'Two' 
+
+    Use the for loop to iterate a dictionary in the Python script.
+
+    capitals={"USA":"Washington, D.C.", "France":"Paris", "Japan":"Tokyo", "India":"New Delhi"}
+
+    for key in capitals:
+        print("Key = " + key + ", Value = " + capitals[key]) 
+
+    * View Keys and Values :
+
+        The keys() and values() methods of Python dictionary class return a view object consisting of keys and values respectively, used in the dictionary.
+
+        >>> d1 = {'name': 'Steve', 'age': 21, 'marks': 60, 'course': 'Computer Engg'}
+        >>>d1.keys()
+        dict_keys(['name', 'age', 'marks', 'course']) 
+
+        This is similar for the values() method. 
+
+        >>> d1= {'name': 'Steve', 'age': 21, 'marks': 60, 'course': 'Computer Engg'}
+        >>>values=d1.values()
+        dict_values(['Steve', 21, 60, 'Computer Engg'])
+
+* Multi-Dimentional Dictionary : 
+
+    Let's assume there are three dictionary objects, as below:
+
+    >>> d1={"name":"Steve","age":25, "marks":60}
+    >>> d2={"name":"Anil","age":23, "marks":75}
+    >>> d3={"name":"Asha", "age":20, "marks":70}
+
+    Let us assign roll numbers to these students and create a multi-dimensional dictionary with roll number as key and the above dictionaries at their value.
+
+    >>> students={1:d1,2:d2,3:d3}
+    >>> students
+    {1: {'name': 'Steve', 'age': 25, 'marks': 60}, 2: {'name': 'Anil', 'age': 23, 'marks': 75}, 3: {'name': 'Asha', 'age': 20, 'marks': 70}}
+
+    The students object is a two-dimensional dictionary. Here d1, d2 and d3 are assigned as values to keys 1,2, and 3, respectively. students [1] returns d1. 
+
+    >>> students[1]
+    {'name': 'Steve', 'age': 25, 'marks': 60}
+
+* Built-In methods : 
+
+    len() : Returns the number of key:value pairs in the dictionary. 
+
+        >>> lang={'A':('Ada','ActionScript'), 'P':("Python", "Perl","PHP")}
+        >>> len(lang)
+        2
+
+    max() : If all keys in the dictionary are numbers, the heighest number will be returned. If all keys in the dictionary are strings, the one that comes last in alphabetical order will be returned. 
+
+        >>> lang={'J':'Java', 'A': 'ActionScript', 'P':'Python'}
+        >>> max(lang)
+        'P'
+        >>> num={5:"five", 100:"hundred",3:"three"}
+        >>> max(num)
+        100 
+    
+    min() : If all keys in the dictionary are numbers, the lowest number will be returned. If all keys in the dictionary are strings, the one that comes first in alphabetical order will be returned. 
+
+        >>> lang={'J':'Java', 'A': 'ActionScript', 'P':'Python'}
+        >>> min(lang)
+        'A'
+        >>> num={5:"five", 100:"hundred",3:"three"}
+        >>> min(num)
+        3
+
+    pop() : Returns the value associated with the key and the corresponding key-value pair is removed. 
+
+        >>> captains={'England': 'Root', 'Australia': 'Smith', 'India': 'Virat', 'Pakistan': 'Sarfraz'}
+        >>> captains.pop('India')
+        'Virat'
+        >>> captains
+        {'England': 'Root', 'Australia': 'Smith', 'Pakistan': 'Sarfraz'} 
+    
+    clear() : Returns empty object by deleting all the key-value pairs. 
+
+        >>> captains
+        {'England': 'Root', 'Australia': 'Smith', 'Pakistan': 'Sarfraz'}
+        >>> captains.clear()
+        >>> captains
+        {} 
+
+    update() :  Adds key-value pairs from the second dictionary object to the first. If the second dictionary contains a key already used in first dictionary object, its value is updated.
+
+        >>> mark1={"Sagar":67, "Amrita":88, "Bhaskar":91, "Kiran":49}
+        >>> mark2={"Arun":55, "Bhaskar":95, "Geeta":78}
+        >>> mark1.update(mark2)
+        >>> mark1
+        {'Sagar': 67, 'Amrita': 88, 'Bhaskar': 95, 'Kiran': 49, 'Arun': 55, 'Geeta': 78} 

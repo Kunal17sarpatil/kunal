@@ -1,0 +1,37 @@
+Variables :
+
+            Any value of certain type is stored in the computer's memory for processing. 
+            Out of available memory locations, one is randomly allocated for storage. 
+            In order to conveniently and repeatedly refer to the stored value, it is given a suitable name. 
+            A value is bound to a name by the assignment operator '='. 
+
+            >>>MyVar = 21
+
+            Here myVar is an identifier (name) referring to integer value 21 (Python treats data value as a value). 
+            However, the same identifier can be used to refer to another value. 
+            For example, the below code will assign myVar as the name of a string value, as shown below. 
+
+            >>MyVar = "Johny"
+
+            So, the value being referred can change (or vary), hence it is called a variable. 
+            It is important to remember that a variable is a name given to a value, and not to a memory location storing the value. 
+
+            A variable in Python is not bound permanently to a specific data type. 
+            Instead, it only serves as a label to a value of a certain type. Hence, the prior declaration of variable's data type is not possible. 
+            In Python, the data assigned to a variable decides its data type and not the other way around.
+
+            Python statements, a string value is assigned to a variable 'name'. We can test its type using the type() function. 
+            (string_type.png)
+
+            Now the Python interpreter won't object if the same variable is used to store a reference to an integer. 
+            (integer.png)
+
+            This is why Python is called a dynamically-typed language.
+
+Naming-Convention :
+
+            1) The name of the variable should start with either an alphabet letter (lower or upper case) or an underscore (_), but it cannot start with a digit.
+            2) More than one alpha-numeric characters or underscores may follow.
+            3) The variable name can consist of alphabet letter(s), number(s) and underscore(s) only. For example, myVar, MyVar, _myVar, MyVar123 are valid variable names but m*var, my-var, 1myVar are invalid variable names.
+            4) Identifiers in Python are case sensitive. So, NAME, name, nAME, and nAmE are treated as different variable names. 
+            

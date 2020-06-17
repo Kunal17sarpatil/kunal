@@ -1,0 +1,136 @@
+* Defining a Function : 
+
+    A function is a reusable block of programming statements designed to perform a certain task. 
+    To define a function, Python provides the def keyword. The following is the syntax of defining a function. 
+
+    def function_name(parameters):
+    "function docstring"
+    statement1
+    statement2
+    ...
+    ...
+    return [expr]
+
+    The keyword def is followed by a suitable identifier as the name of the function and parentheses. 
+    One or more parameters may be optionally mentioned inside parentheses. The : symbol after parentheses starts an indented block. 
+
+    The first statement in this block is an explanatory string which tells something about the functionality. It is called a docstring and it is optional. 
+    It is somewhat similar to a comment. Subsequent statements that perform a certain task form the body of the function.
+
+    The last statement in the function block includes the return keyword. It sends an execution control back to calling the environment. 
+    If an expression is added in front of return, its value is also returned. 
+
+    Example : 
+
+        def SayHello():
+            ""First line is docstring. When called, a greeting message will be displayed""
+            print ("Hello! Welcome to Python tutorial on TutorialsTeacher")
+            return
+
+    To call function just call with it it's function name SayHello()
+
+* Function with parameters :
+
+    It is possible to define a function to receive one or more parameters (also called arguments) and use them for processing inside the function block. 
+    Parameters/arguments may be given suitable formal names. The SayHello() function is now defined to receive a string parameter called name. 
+    Inside the function, print() statement is modified to display the greeting message addressed to the received parameter. 
+
+    Example :
+
+        def SayHello(name):
+            print ("Hello {}!.".format(name))
+            return
+
+    Output : 
+
+        >>>SayHello("John")
+        Hello John!
+
+
+    Example : 
+
+        def result(m1,m2,m3):
+                ttl=m1+m2+m3
+                percent=ttl/3
+                if percent>=50:
+                    print ("Result: Pass")
+                else:
+                    print ("Result: Fail")
+                return
+
+        p=int(input("Enter your marks in physics: "))
+        c=int(input("Enter your marks in chemistry: "))
+        m=int(input("Enter your marks in maths: "))
+        result(p,c,m)
+
+    Output : 
+
+        Enter your marks in physics: 50
+        Enter your marks in chemistry: 60
+        Enter your marks in maths: 70
+        Result: Pass
+
+        Enter your marks in physics: 30
+        Enter your marks in chemistry: 40
+        Enter your marks in maths: 50
+        Result: Fail        
+
+* Function with default parameter : 
+
+    While defining a function, its parameters may be assigned default values. This default value gets substituted if an appropriate actual argument is passed when the function is called. 
+    However, if the actual argument is not provided, the default value will be used inside the function.
+
+    Example : 
+
+        def SayHello(name='Guest'):
+            print ("Hello " + name)
+            return
+
+    Output : 
+
+        >>> SayHello()
+        Hello Guest
+        >>> SayHello('Tom')
+        Hello Tom 
+
+* Function return a value :
+
+    Most of the times, we need the result of the function to be used in further processes. 
+    Hence, when a function returns, it should also return a value.
+
+    A user-defined function can also be made to return a value to the calling environment by putting an expression in front of the return statement. 
+    In this case, the returned value has to be assigned to some variable. 
+
+    Example : 
+
+        def sum(a, b): 
+            return a + b
+
+    Output : 
+
+        >>> total=sum(10, 20)
+        >>> total
+        30 
+
+* Lambda Function :
+
+    Normally we use the def keyword to define a function with a name. The lambda keyword is used to create anonymous functions. 
+    Usually, such a function is meant for one-time use. 
+
+    The lambda function can have any number of arguments but there's always a single expression after the : symbol. 
+    When this function is called, the expression is its return value. 
+
+    Example :
+        
+        >>>square = lambda x : x * x
+        >>>square(5)
+        25 
+
+    Example : 
+
+        >>>disp = lambda str: print('Output: ' + str)
+        >>>disp("Hello World!")
+        
+    Output: 
+    
+        Hello World! 

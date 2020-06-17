@@ -1,0 +1,123 @@
+* Tuple :
+
+Tuple is a collection of items of any Python data type, same as the list type. Unlike the list, tuple is immutable.
+
+The tuple object contains one or more items, of the same or different types, separated by comma and enclosed in parentheses (). 
+
+    >>> names = ('Iron man', 'Captain America','Hulk')
+
+The tuples can also have objects of different data types
+ 
+    >>> orderItem=(1, "Jeff", "Computer", 75.50, True) 
+
+Each individual element in the sequence is accessed by the index in the square brackets []. An index starts with zero.
+
+    >>> orderItem=(1, "Jeff", "Computer", 75.50, True)
+    >>> orderItem[0]
+    1
+    >>> orderItem[1]
+    'Jeff'
+    >>> orderItem[2]
+    'Computer'
+    >>> orderItem[3]
+    75.50
+    >>> orderItem[4]
+    True 
+
+Tuple is immutable. So, once a tuple is created, any operation that seeks to change its contents is not allowed. 
+
+    >>> orderItem=(1, "Jeff", "Computer", 75.50, True)
+    >>> orderItem[2]="Laptop"
+    TypeError: 'tuple' object does not support item assignment 
+
+* Tuple Operations :
+
+    * Concatenation : Returns a tuple containing all the elements of the first and the second tuple object. 
+
+        >>> tpl1 = (1,2,3)
+        >>> tpl2 = (4,5,6)
+        >>> tpl1 + tpl2
+        (1,2,3,4,5,6)
+
+    * Repetetion :  Concatenates multiple copies of the same tuple. 
+
+        >>> tpl1 = (1,2,3)
+        >>> tpl1 * 2
+        (1,2,3,1,2,3)
+    
+    * slice : Returns the item at the given index. A negative index counts the position from the right side. 
+
+        >>> tpl1=(1,2,3,4,5,6)
+        >>> tpl1[3]
+        4
+        >>> tpl1[-2]
+        5 
+    
+    * Range-Slice : Fetches the items in the range specified by two index operands separated by the : symbol.   
+                    If the first operand is omitted, the range starts at zero index. 
+                    If the second operand is omitted, the range goes up to the end of tuple. 
+
+        >>> tpl1=(1,2,3,4,5,6)
+        >>> tpl1[1:3]
+        (2, 3)
+        >>> tpl1[3:]
+        (4, 5, 6)
+        >>> tpl1[:3]
+        (1, 2, 3)
+    
+    * in : Returns true if an item exists in the given tuple. 
+
+        >>> t1=(1,2,3,4,5,6)
+        >>> 5 in tpl1
+        True
+        >>> 10 in tpl1
+        False
+    
+    * not in : Returns true if an item does not exist in the given tuple. 
+
+        >>> t1=(1,2,3,4,5,6)
+        >>> 4 not in t1
+        False
+        >>> 10 not in t1
+        True 	
+    
+* Built-in methods :
+
+    * len() : Returns the number of element in the tuple.
+
+        >>> tpl1 = (1,2,3,4,5)
+        >>> len(tpl1)
+        5
+    
+    * max() : If the tuple contains numbers, the heighest number will be returned. 
+              If the tuple contains strings, the one that comes last in alphabetical order will be returned. 
+
+        >>> tpl1=(12, 45, 43, 8, 35)
+        >>> max(tpl1)
+        45
+        >>> tpl2=('python', 'java', 'C++')
+        >>> max(tpl2)
+        'python'
+
+    * min() : If the tuple contains numbers, the lowest number will be returned. 
+              If the tuple contains strings, the one that comes first in alphabetical order will be returned. 
+        
+        >>> tpl1=(12,45,43,8,35)
+        >>> min(tpl1)
+        8
+        >>> t2=('python', 'java', 'C++')
+        >>> min(tpl2)
+        'C++' 
+    
+    * sum() : This function returns the arithmetic sum of all the items in the tuple.
+
+        >>> tpl = (1,2,3,4,5)
+        >>> sum(tpl)
+        10
+    
+    * sorted() : 
+
+        >>> tpl = (4,5,2,1,3)
+        >>> sorted(tpl)
+        (1,2,3,4,5)
+    

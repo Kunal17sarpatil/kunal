@@ -1,0 +1,22 @@
+* Method Overriding :
+
+    A subclass may change the functionality of a Python method in the superclass. It does so by redefining it. This is termed python method overriding.
+
+    Methods of the parent class are available for use in the inherited class. However, if needed, we can modify the functionality of any base class method. 
+    For that purpose, the inherited class contains a new definition of a method (with the same name and the signature already present in the base class). 
+    Naturally, the object of a new class will have access to both methods, but the one from its own class will have precedence when invoked. This is called method overriding. 
+
+    Example : 
+
+            >>> class A:
+                    def sayhi(self):
+                        print("I'm in A")                          
+            >>> class B(A):
+                    def sayhi(self):
+                        print("I'm in B")                             
+            >>> bobj=B()
+            >>> bobj.sayhi()
+
+    Output : 
+
+        I'm in B

@@ -1,0 +1,15 @@
+Index :- 
+
+1) Introduction 
+2) Basic Syntax (Indentation & commenting) 
+3) Variables 
+4) Datatypes 
+5) Operators 
+6) Decision Control(if/else)
+7) Loops (while and for) 
+8) Function 
+9) Modules 
+10) Errors and Exception Handling 
+11) File Handling 
+12) Classes And Objects 
+13) Polymorphism

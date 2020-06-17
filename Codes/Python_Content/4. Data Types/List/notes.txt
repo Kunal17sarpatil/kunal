@@ -1,0 +1,158 @@
+List : 
+
+The list is a collection of items of different data types. It is an ordered sequence of items. 
+A list object contains one or more items, not necessarily of the same type, which are separated by comma and enclosed in square brackets []. 
+
+>>> names = ['Iron man', 'Capatin America', 'Hulk', 'Hawkeye']
+
+A list can also contain elements of different types.
+
+>>> product = [1, 'Laptop', 500, 'Dell']
+
+The above list product includes four elements. 
+Each individual element in the sequence is accessed by the index in the square brackets [].
+
+>>> product[0]
+1
+>>> product[1]
+'Laptop'
+>>> product[2]
+500
+
+The list object is mutable. It is possible to modify its contents, which will modify the value in the memory.
+
+>>> product[1] = 'Computer'
+>>> product
+[1,'Computer',500, 'Dell']
+
+Use the del keyword to delete the list object.
+
+>>> del product
+
+List Operation :
+
+    * Concatenation (+) : Returns a list containing all the elements of the first and the second list. 
+                
+        >>> lst1 = [1,2,3]
+        >>> lst2 = [4,5,6]
+        >>> lst1 + lst2
+        [1,2,3,4,5,6]
+
+    * Repetition (*) : Concatenates multiple copies of the same list. 
+
+        >>> lst1 = [1,2,3]
+        >>> lst * 2
+        [1,2,3,1,2,3]
+
+    * Slice []: Returns the item at the given index. A negative index counts the position from the right side. 
+
+        >>> lst1 = [1,2,3,4,5]
+        >>> lst1[2]
+        3
+        >>> lst1[-2]
+        4
+
+    * range-slice[:] :  Fetches items in the range specified by the two index operands separated by : symbol.
+                        If the first operand is omitted, the range starts from the zero index. If the second operand is omitted, the range goes up to the end of the list.  
+        
+        >>> lst1 = [1,2,3,4]
+        >>> lst1[1:3]
+        [2,3,4]
+        >>> lst1[2:]
+        [3,4]
+        >>> lst1[:3]
+        [1,2,3,4]
+
+    * in : Returns true if an item exists in the given list. 
+
+        >>> lst1 = [1,2,3,4,5,6]
+        >>> 3 in lst1
+        True
+        >> 50 in lst1
+        False
+
+    * not in : Returns true if an item does not exist in the given list.
+
+        >>> lst1 = [1,2,3,4,5,6]
+        >>> 5 not in lst1
+        False
+        >>> 40 not in lst1
+        True
+
+Built-in List Methods : 
+
+    * len() : The len() method returns the number of elements in the list/tuple. 
+
+        >>> lst1 = [1,2,3,4,5]
+        >>> len(lst1)
+        5
+
+    * max() : The max() method returns the largest number, if the list contains numbers. 
+            If the list contains strings, the one that comes last in alphabetical order will be returned. 
+        
+        >>> lst1 = [24,32,45,22,65]
+        >>> max(lst1)
+        65
+
+        >>> lst1 = ['Python, 'Java', 'C++']
+        >>> max(lst1)
+        'Python'
+    
+    * min() : The min() method returns the smallest number, if the list contains numbers. 
+            If the list contains strings, the one that comes first in alphabetical order will be returned. 
+        
+        >>> lst1 = [24,32,45,22,65]
+        >>> min(lst1)
+        22
+
+        >>> lst1 = ['Python, 'Java', 'C++']
+        >>> min(lst1)
+        'C++'
+    
+    * append() : This method adds an item at the end of list.
+
+        >>> lst1 = ['Python', 'Java', 'C++']
+        >>> lst1.append('PHP')
+        >>> lst1
+        ['Python', 'Java', 'C++', 'PHP']
+
+    * insert() : This method inset an element at the specified index
+
+        >>> lst1 = ['Python','C++','Java']
+        >>> lst1.insert(1,'Ruby')
+        >>> lst1
+        ['Python','Ruby','C++','Java']
+
+    * remove() : This method removes specified object from the list
+
+        >>>lst1 = ['Python','C++','Java','Go']
+        >>>lst1.remove('Go')
+        >>>lst1
+        ['Python','C++','Java','Go']
+    
+    * pop() : This method removes and returns the last object in the list
+
+        >>>lst1 = ['Python','C++','Java','Go']
+        >>>lst1.pop('Go')
+        'Go'
+        >>>lst1
+        ['Python','C++','Java','Go']
+    
+    * reverse() : This method reverse the order of the list
+
+        >>>lst1 = ['Python','C++','Java','Go']
+        >>>lst1.reverse()
+        >>>lst1
+        ['Go','Python','C++','Java']
+    
+    * sort() :  Rearranges the items in the list according to the alphabetical order. Default is the ascending order. 
+                For descending order, put reverse=True as an argument in the function bracket. 
+        
+        >>> L2=['Python', 'C++', 'Java', 'Ruby']
+        >>> L2.sort()
+        >>> L2
+        ['C++', 'Java', 'Python', 'Ruby']
+        >>> L2.sort(reverse=True)
+        >>> L2
+        ['Ruby', 'Python', 'Java', 'C++'] 
+        

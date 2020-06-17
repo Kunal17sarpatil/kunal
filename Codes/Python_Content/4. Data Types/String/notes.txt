@@ -1,0 +1,80 @@
+Strings :
+
+            1) Normal String :
+
+                A string object is one of the sequence data types in Python. 
+                It is an immutable sequence of Unicode characters. 
+                Strings are objects of Python's built-in class 'str'. 
+                String literals are written by enclosing a sequence of characters in single quotes ('hello'), double quotes ("hello") or triple quotes ('''hello''' or """hello"""). 
+
+            (String1.png)
+
+            2) String Sequence : 
+            
+                A sequence is defined as an ordered collection of items. Hence, a string is an ordered collection of characters. 
+                The sequence uses an index (starting with zero) to fetch a certain item (a character in case of a string) from it. 
+            
+                (String_seq.png)
+
+                The string is an immutable object. Hence, it is not possible to modify it. The attempt to assign different characters at a certain index results in errors. 
+
+                >>> myString[1]='a'
+                TypeError: 'str' object does not support item assignment
+
+            3) Triple-Quote String :
+                
+                The triple quoted string is useful when a multi-line text is to be defined as a string literal. 
+
+                >>> myString="""Welcome to
+                Python Tutorial
+                from TutorialsTeacher"""
+                >>> myString
+                'Welcome to "Python Tutorial" from TutorialsTeacher' 
+
+            4) Buitl-in Methods String :
+
+                capitalize() : 
+
+                    Converts the first character of a string to uppercase letters. 
+
+                    >>> str='python'
+                    >>> str.capitalize()
+                    'Python' 
+
+                upper() :
+
+                    Replaces the lowercase characters in a string with corresponding uppercase characters.
+                    
+                    >>> str='Python'
+                    >>> str.upper()
+                    'PYTHON' 
+
+                lower() :
+
+                    Replaces the uppercase characters in a string with corresponding lowercase characters. 
+
+                    >>> mystr='PYTHON'
+                    >>> mystr.lower()
+                    'python'
+
+                count() : 
+
+                    The count() method returns the number of occurrences of a substring in the given string.
+                    
+                    >>> mystr='Python Tutorial From Learning Python'
+                    >>> mystr.count('Python')
+                    2  
+
+                replace() : 
+
+                    It takes two arguments. The first is the substring to be replaced. The second is the substring to replace with.
+
+                    >>> 'banana'.replace('na','ha')
+                    'bahaha'
+
+                 split() :
+
+                    It takes one argument. The string is then split around every occurrence of the argument in the string.
+
+                    >>> 'Hello. Hey. Hii'.split('.')
+                    ['Hello', 'Hey', 'Hii']        

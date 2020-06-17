@@ -1,0 +1,56 @@
+* Comparison Operators in Python : 
+
+    The comparison operators returns a boolean either True or False. 
+
+* Assuming that x=10 and y=20, the result of the operations is also given in following table:
+
+    * greater-than(>) : True if the left operand is higher than the right one. 
+
+        >>>x>y
+        False 
+
+    * less-than(<)  : True if the left operand is lower than the right one.
+
+        >>>x<y
+        True
+    
+    * Equalto(==) : True if the operands are Equalto
+
+        >>>x==y
+        False
+    
+    * not-equal(!=) : True if the operands are not equal 
+
+        >>>x!=y
+        True
+
+    * greaterthan-equal (>=) : True if the left operand is higher than or equal to the right one 
+
+        >>> x>=y    
+        False
+
+    * lessthan-equal (<=) : True if the left operand is lower than or equal to the right one 
+
+        >>> x<=y
+        True 
+
+* Logical Operators in python : 
+
+    The following keywords in Python combine two Boolean expressions. They are called logical operators. 
+    Two operands should have Boolean value True or False. Assuming that x=True and y=False.
+
+    * and : True if both are equal 
+        
+        >>> x and y
+        False 
+    
+    * or : True if at least one is True
+     
+        >>>x or y
+        True
+    
+    * not : Returns True if an expression evalutes to false and vice-versa 
+
+        >>>not x
+        True
+    

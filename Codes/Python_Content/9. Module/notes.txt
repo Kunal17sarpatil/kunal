@@ -1,0 +1,51 @@
+* Modules :
+
+    Any text file with the .py extension containing Python code is basically a module. Different Python objects such as functions, classes, variables, constants, etc., 
+    defined in one module can be made available to an interpreter session or another Python script by using the import statement. Functions defined in built-in modules need to be imported before use. On similar lines, 
+    a custom module may have one or more user-defined Python objects in it. These objects can be imported in the interpreter session or another script. 
+
+* Creating Module : 
+
+    Shown below is a Python script containing the definition of SayHello() function. It is saved as hello.py. 
+
+    Example : Hello.py
+
+        def SayHello(name):
+            print("Hello {}! How are you?".format(name))
+            return
+
+* Importing a module : 
+
+    We can now import this module and execute the SayHello() function from the Python prompt. 
+
+        >>> import hello
+        >>> hello.SayHello("Jonathan")
+        Hello Jonathan! How are you? 
+
+* Renaming the Imported Module : 
+    
+    Use the as keyword to rename the imported module as shown below.
+
+    >>> import math as cal
+    >>> cal.log(4) 
+    1.3862943611198906
+
+* 'from' import statement : 
+
+    Example : functions.py
+
+        def sum(x,y):
+            return x+y
+        def average(x,y):
+            return (x+y)/2
+        def power(x,y):
+            return x**y
+
+    Now, we can import one or more functions using the from...import statement. 
+    For example, the following code imports only two functions in the test.py. 
+
+        from functions import sum, average
+        print("sum: ", sum(10, 20)) # Output: sum: 30
+        print("average: ", average(10, 20)) # Output: average: 15
+        # calling power(2, 4) will throw an error
+
